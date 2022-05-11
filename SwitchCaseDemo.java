@@ -87,6 +87,7 @@ public class SwitchCaseDemo{
 			case 2: day = 28;break;
 		}
 		*/
-		//练习：
+		
+		
 	}
 }
