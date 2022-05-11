@@ -40,7 +40,7 @@ public class SwitchCaseDemo{
 		
 		System.out.println("请输入符号：");
 		double temp = 0;
-		char c = s.next().charAt(0);     //获取符号的方法，java中只有整数、小数和字符串三种。单个字符获取，其中没有这种获取方式：nextChar()
+		char c = s.next().charAt(0);     //获取单个字符的方法，java中只有整数、小数和字符串三种。单个字符获取，其中没有这种获取方式：nextChar()
 		switch(c){
 			case '+': temp = a1 + a2;break;
 			case '-': temp = a1 - a2;break;
