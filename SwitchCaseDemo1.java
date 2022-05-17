@@ -1,16 +1,16 @@
-//Á·Ï°£ºÊäÈëÒ»¸öÊı×Ö±íÊ¾ÔÂ·İ£¬µÚ¶ş¸öÊı×Ö±íÊ¾ÌìÊı£¬È»ºóÊä³öÕâÒ»ÌìÊÇÕâÒ»ÄêµÄµÚ¼¸Ìì£¨²»¿¼ÂÇÈòÄê£©
+//ç»ƒä¹ ï¼šè¾“å…¥ä¸€ä¸ªæ•°å­—è¡¨ç¤ºæœˆä»½ï¼Œç¬¬äºŒä¸ªæ•°å­—è¡¨ç¤ºå¤©æ•°ï¼Œç„¶åè¾“å‡ºè¿™ä¸€å¤©æ˜¯è¿™ä¸€å¹´çš„ç¬¬å‡ å¤©ï¼ˆä¸è€ƒè™‘é—°å¹´ï¼‰
 
 import java.util.Scanner;
 
 public class SwitchCaseDemo1{
 	public static void main(String[] args){
 		Scanner s = new Scanner(System.in);
-		System.out.println("ÇëÊäÈëÒ»¸öÔÂ·İÊı£º");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªæœˆä»½æ•°ï¼š");
 		int month = s.nextInt();
-		System.out.println("ÇëÊäÈëÒ»¸öºÅÊı£º");
+		System.out.println("è¯·è¾“å…¥ä¸€ä¸ªå·æ•°ï¼š");
 		int day = s.nextInt();
-		
-		int temp = 0;
+		//1---
+		/* int temp = 0;
 		switch(month){
 			case 12: temp = (month - 1) * 31 - 7;break;
 			case 11: 
@@ -26,7 +26,24 @@ public class SwitchCaseDemo1{
 			case 1: temp = (month - 1) * 31;break;
 			default: System.out.println("Illegal");
 		}
-		System.out.println("ÕâÊÇÕâÒ»ÄêÖĞµÄµÚ" + (temp + day) + "Ìì");
-		
+		System.out.println("è¿™æ˜¯è¿™ä¸€å¹´ä¸­çš„ç¬¬" + (temp + day) + "å¤©"); */
+		//2---
+		 switch(month){
+			case 12: day += 30;
+			case 11: day += 31;
+			case 10: day += 30;
+			case 9: day += 31;
+			case 8: day += 31;
+			case 7: day += 30;
+			case 6: day += 31;
+			case 5: day += 30;
+			case 4: day += 31;
+			case 3: day += 28;
+			case 2: day += 31;
+			case 1: day += 0;
+		System.out.println("è¿™æ˜¯è¿™ä¸€å¹´ä¸­çš„ç¬¬" + day + "å¤©"); 
+		}
+		 
+		 
 	}
 }
