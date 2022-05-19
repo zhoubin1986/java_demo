@@ -17,14 +17,14 @@ public class WhileDemo{
 		}
 		System.out.println(sum); */
 		
-		 //2---
+		/*  //2---
 		 int num = 1;
 		while(num <= 20){
 			if(num%3 == 0 && num%7 != 0)
 				System.out.println(num);
 			
 				num++;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-		}  
+		}   */
 		//2-1---
 		/* int i = 0;
 		while(i <= 20){
@@ -59,5 +59,27 @@ public class WhileDemo{
 			return;
 		}
 		System.out.println(num + "是质数"); */
+		
+		//4-1---
+		int n = Integer.parseInt(args[0]);//monthIn=Integer.parseInt(args[0]);
+
+										//Integer.parseInt(String)就是将String字符类型数据转换为Integer整型数据，args[0]就是输入参数中的第一个参数字符串。
+										//Integer.parseInt(String)遇到一些不能被转换为整型的字符时，会抛出异常
+										//args是入口函数main(String[] args)方法的参数，args是字符串数组，args[0]取出的数据就是字符串，Integer.parseInt可以把字符串转换为int(Integer)类型
+										//这段程序运行时需要带参数运行的，否则会报,字符串只能是数字，且在范围内
+
+		int k = (int)Math.sqrt(n);  //对称结构  1*100 2*50 4*25 5*20 10*10 ->...
+		System.out.println(k);
+		int i;
+		for(i=2;i<=k;i++){
+			if(n%i == 0){
+				break;
+			}
+		}
+		if(i>k){
+			System.out.println(n + "是质数");
+		}else{
+			System.out.println(n + "是合数");  //只要超过平方根值还不能整除即为质数，否则为合数
+		}
 	}
 }
