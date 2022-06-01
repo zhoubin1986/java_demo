@@ -59,9 +59,28 @@ public class ArrDemo1{
 		} */
 		
 		//利用JAVA原生类进行排序
-		Arrays.sort(arr);
+		/* Arrays.sort(arr);    //只能按升序排序
 		for(int e:arr){
 			System.out.println(e);
+		} */
+		
+		//定义一个新的数组来存储翻转后结果,时间复杂度O(n)，空间复杂度o(n)
+		/* int[] arr2 = new int[arr.length];
+		for(int i=0,j=arr.length-1;j>=0;i++,j--){  //arr2[4] = arr[0];
+			arr2[j] = arr[i];  //arr[i] = arr2[j];
+		}
+		for(int e:arr2){
+			System.out.print(e + " ");
+		}  */
+		
+		//首尾互换，时间复杂度O(n)，空间复杂度o(1) --->常用，省空间
+		for(int i=0,j=arr.length-1;i<j;i++,j--){
+			int temp = arr[i];
+			arr[i] = arr[j];
+			arr[j] = temp;
+		}
+		for(int e:arr){
+			System.out.print(e + " ");
 		}
 	}
 }
