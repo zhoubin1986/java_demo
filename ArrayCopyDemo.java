@@ -15,7 +15,7 @@ public class ArrayCopyDemo{
 		//System.arraycopy(arr1,3,arr2,2,3);
 		
 		//3.数组扩容
-		int[] arr = {11,22,33,44,55,66,77,88,99};
+		int[] arr = {11,22,33,44,55,66,77,88,100};
 		/* int[] temp = new int[15];
 		System.arraycopy(arr,0,temp,0,arr.length);
 		arr = temp;//本质上是数组的负责，扩容后的数组的地址实际上发生了改变 加上判断 */
