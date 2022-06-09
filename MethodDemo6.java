@@ -6,11 +6,13 @@ f(9) = f(7) + f(8)
 f(3) = f(2) + f(1)
 f(2) = 2
 f(1) = 1
+
+斐波那契数列：(0 1) 1 2 3 5 8 13 21 34 55...
  */
 
 public class MethodDemo6 {
 	public static void main(String[] args) {
-		System.out.println(stepForm(10));
+		System.out.println(stepForm(9));
 	}
 	
 	public static int stepForm(int n) {
