@@ -4,8 +4,8 @@ public class SuperDemo {
 	public static void main(String[] args) {
 //		Dog d = new Dog();  //先创建父类对象在创建子类对象
 //		d.eat();
-		Animal a = new Cat("yellow"); //用父类声明，用子类创建对象，向上造型
-		a.eat();
+		Animal a = new Cat("yellow"); //用父类声明，用子类创建对象，不确定具体是什么对象，向上造型
+		a.eat();//不确定子类中是否有，向上造型，就近原则
 //		a.catch_();  //不能调用子类中单独定义的属性和方法
 	}
 }
@@ -13,8 +13,8 @@ public class SuperDemo {
 class Animal {
 	String name;
 	double weight;
-	String color;
-
+	String color;	
+	
 	public Animal(String color) {
 		this.color = color;
 		System.out.println("创建了一个Animal父类对象");
@@ -26,7 +26,7 @@ class Animal {
 	}
 
 	public void eat() {
-		System.out.println("eat1");
+		System.out.println("animal->eat");
 	}
 
 	public void sleep() {
@@ -51,10 +51,14 @@ class Cat extends Animal {
 		super(color);
 		System.out.println("---cat!");
 	}
-
+	
+	@Override
+	public void eat(){
+		System.out.println("Cat->eat");
+	}
+	
 	@Override
 	public void eat(String str){
-		
 		System.out.println("eat3");
 	}
 	

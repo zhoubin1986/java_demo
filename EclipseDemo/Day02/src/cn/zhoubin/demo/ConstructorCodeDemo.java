@@ -14,7 +14,7 @@ class Baby {
 	boolean sex;
 	double weight;
 	{
-		this.cry(); // 初始化代码块或构造代码块，应该放构造方法中第一行位置
+		this.cry(); //当前活动类， 初始化代码块或构造代码块，应该放构造方法中第一行位置
 		this.eat();
 	}
 
